@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<!-- Font Awesome Script -->
+	<script src="https://kit.fontawesome.com/7ae40850c4.js" crossorigin="anonymous"></script>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/sherry.css" />
+	<title>How we help essence</title>
+</head>
+
+<body>
+	<section>
+		<div class="container-fluid">
+			<div class="row careers">
+				<div class="career-1 col-md-6 border-right s-100vh">
+					<a href="culture.html">
+						<h1 class="s-h1 ">
+							Culture
+						</h1>
+						<p>
+							Find out what it's like to work here</p>
+					</a>
+					<div class="overlay"></div>
+
+				</div>
+				<div class="career-2 col-md-6 s-100vh">
+					<a href="jobs.html">
+						<h1 class="s-h1 ">
+							Careers
+						</h1>
+						<p>
+							Find the role that's right for you</p>
+					</a>
+					<div class="overlay"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- footer end -->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script>
+		var menu = document.getElementById("menu");
+
+		function closemenu() {
+			menu.style.top = "-100vh";
+			window.onscroll = function () { };
+		}
+
+		function openmenu() {
+			menu.style.top = "0";
+			window.onscroll = function () {
+				window.scrollTo(0, 0);
+				var d = document.getElementsByClassName("n-anchors");
+			};
+		}
+
+		$(document).ready(function () {
+			$(".n-anchors").hover(function () {
+				$(".n-anchors").css({
+					color: '#131415'
+				});
+				$(this).css({
+					color: '#ea533c'
+				}, "slow");
+			},
+				function () {
+					$('.n-anchors').css({
+						color: 'white'
+					});
+				});
+
+			$(".career-1").hover(function () {
+				$('.career-2 .overlay').addClass("active");
+			}, function () {
+				$('.career-2 .overlay').removeClass("active");
+			});
+			$(".career-2").hover(function () {
+				$('.career-1 .overlay').addClass("active");
+			}, function () {
+				$('.career-1 .overlay').removeClass("active");
+			});
+		});
+	</script>
+</body>
+
+</html>
